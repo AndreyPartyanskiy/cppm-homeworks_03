@@ -5,12 +5,12 @@
 
 class Counter
 {
-	int abc=1;
+	int abc;
 
 public:
 	
 
-	void set_counter(int abc) 
+	Counter (int abc) 
 	{
 		this->abc = abc;
 	};
@@ -39,8 +39,7 @@ int main()
 	std::string str;
 	char symb;
 	int c,a=0;
-	Counter count;
-
+	
 	while (!a)
 	{
 		std::cout << "Вы хотите указать начальное значение счётчика? Введите да или нет: ";
@@ -49,13 +48,13 @@ int main()
 		{
 			std::cout << "Введите начальное значение счётчика: ";
 			std::cin >> c;
-			count.set_counter(c);
 			a = 1;
 		}
 		else
 		{
 			if (str == "нет")
 			{
+				c = 1;
 				a = 1;
 			}
 			else
@@ -65,6 +64,7 @@ int main()
 		}
 	}
 	
+	Counter count(c);
 	
 	while (a)
 	{

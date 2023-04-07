@@ -15,12 +15,12 @@ public:
 	{
 		if (num1==0)
 		{
-			return (0);
+			return false;
 		}
 		else 
 		{
 			this->num1 = num1;
-			return (1);
+			return true;
 		}
 	};
 
@@ -28,12 +28,12 @@ public:
 	{
 		if (num2 == 0)
 		{
-			return (0);
+			return false;
 		}
 		else
 		{
 			this->num2 = num2;
-			return (1);
+			return true;
 		}
 	};
 
